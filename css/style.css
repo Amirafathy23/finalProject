@@ -1,0 +1,144 @@
+/* .colors{
+    background-color: brown;
+    position: fixed;
+    left: 0;
+    top: 30%;
+    width: 400px;
+    height: 300px;
+}
+.color-box{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+   z-index: 88;
+
+}
+.itemes-color{
+    background-color: chocolate;
+    width: 200px;
+    z-index: 99999;
+} */
+
+body {
+    position: relative;
+  }
+
+.home{
+    /* background-image: url(../img/header-bg.jpg); */
+    height: 100vh;
+    background-color: rgba(11, 11, 45, 0.464);
+    /* background-position: center center;
+    background-size: cover; */
+}
+.layer{
+    background-color: rgba(0, 0, 0, 0.779);
+    height: 100vh;
+}
+.home .layer .navbar .navbar-nav .nav-item .nav-link{
+    color:white ;
+
+ }
+ .home .layer .navbar .navbar-nav .nav-item .nav-link.active{
+    color:chocolate ;
+    width: 40px;
+   
+    
+} 
+.home .layer .navbar .navbar-nav .nav-item .nav-link:hover{
+    color:chocolate ;
+    
+}
+.home .layer .navbar .navbar-nav .nav-item {
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+   
+    
+}
+.nav-link{
+    position: relative;
+}
+.home .layer .navbar .navbar-nav .nav-item .nav-link::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 3px;
+    background-color: brown;
+    transition: all .5s;
+    bottom: 0;
+    left: 0;
+}
+.nav-link:hover.nav-link::after{
+    width: 40px !important; 
+}
+
+/* .home .layer .navbar .navbar-nav .nav-item:hover{
+    transform:rotate(360deg) !important;
+    -webkit-transform:rotate(360deg) !important;
+    -moz-transform:rotate(360deg) !important;
+    -ms-transform:rotate(360deg) !important;
+    -o-transform:rotate(360deg) !important;
+
+} */
+.home-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-photo{
+    position: relative;
+    animation: move 2s infinite;
+   
+}
+
+
+@keyframes move {
+    0%{
+        bottom: 15px;
+      
+}
+50%{
+    bottom: 7px;
+   
+
+}
+100%{
+    bottom: 0px;
+  
+}
+
+
+    
+}
+.service-title::after{
+    content: '';
+    width: 70px;
+    height: 4px;
+    background-color: brown;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.line::after{
+    content: '';
+    width: 40px;
+    height: 4px;
+    background-color: brown;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: all .5s;
+
+}
+.item:hover .line::after{
+    width: 70px;
+}
+.carousel-indicators button{
+    background-color: brown !important;
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 50% !important;
+}
